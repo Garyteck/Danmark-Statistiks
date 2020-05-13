@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DanmarkStatistics</string>
+    <string name="table">Table</string>
+    <string name="subject">Subject</string>
+</resources>

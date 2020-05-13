@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@+id/subject_fragment">
+
+    <fragment
+        android:id="@+id/subject_fragment"
+        android:name="bestplan.android.com.danstatistik.ui.view.SubjectFragment"
+        android:label="@string/subject"
+        tools:layout="@layout/fragment_subject">
+
+        <action
+            android:id="@+id/action_subject_to_table"
+            app:destination="@id/table_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/table_fragment"
+        android:name="bestplan.android.com.danstatistik.ui.view.TableFragment"
+        android:label="@string/table"
+        tools:layout="@layout/fragment_home">
+
+        <argument
+            android:name="subjectID"
+            android:defaultValue="02"
+            app:argType="string" />
+
+    </fragment>
+
+
+</navigation>
